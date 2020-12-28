@@ -1,0 +1,74 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+
+typedef struct{
+    char nomJRN[12];
+    int prixJRN;
+    int quantiteJRN;
+}JRN;
+
+typedef struct{
+    char nomTAB[12];
+    int prixTAB;
+    int quantiteTAB;
+}TAB;
+
+int main()
+{
+    int choix,choix2,choix3,choix4;
+    
+    JRN JRN[3];
+
+    TAB TAB[3];
+  do
+    { 
+    printf("1 === ajout de marchandise en stock ======\n");
+    printf("9 === quitter le programme ===============\n");
+    printf("votre choix : ");
+    scanf("%d",&choix);
+     do 
+    {
+        if (choix==1)
+        {
+        printf("11 ====== ajout Tabac ==================\n");
+        printf("13 ====== Retour menu precedent ========\n");
+        printf("votre choix : ");
+        scanf("%d",&choix2); 
+          do
+         {
+          if(choix2==11)
+          {
+              printf("111 === Marlboro ==================\n");
+              printf("112 === Mar ==================\n");
+              printf("116 === Retour menu precedent =====\n");
+              printf("votre choix : ");
+              scanf("%d",&choix3);
+              
+              if(choix3==111)
+              {
+                 printf("entrez la quantite de Marlboro : ");
+                 scanf("%d",TAB[3].quantiteTAB);
+              }
+              else if (choix3==112)
+              {
+                 printf("entrez la quantite de Mar : ");
+                 scanf("%d",TAB[3].quantiteTAB);
+              }
+              
+          }
+         }while(choix3!=116);
+           
+        }
+    }while(choix2!=13);
+  
+    }while(choix!=9);
+ 
+    return 0;
+}
