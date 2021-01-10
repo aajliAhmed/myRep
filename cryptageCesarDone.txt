@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+
+    char lettre[255];
+    char lettre2[255];
+    int a=0,b=0;
+    int choix;
+    
+    printf("cryptage : 1\ndecryptage : 2 \n");
+    printf("entrer votre choix : ",choix);
+    scanf("%d",&choix);
+    
+    if(choix==1){
+    printf("entrer le message :");
+    scanf(" %[^\n]",&lettre);
+    a= strlen(lettre);
+
+       for(int i=0;i<a;i++){
+
+
+            if(lettre[i]==122 || lettre[i]==90 || lettre[i]==32){
+              
+                lettre[i]=96;
+                lettre[i]=65;
+                lettre[i]=31;
+
+            }
+            printf("%c",lettre[i]+1);
+        }
+
+}
+    if(choix==2){
+            printf("entrer le message :");
+         scanf(" %[^\n]",&lettre2);
+         b= strlen(lettre2);
+       for(int i=0;i<b;i++){ 
+          
+            if(lettre2[i]==65 || lettre2[i]==97 || lettre2[i]==32 ){
+                lettre2[i]=91;
+                lettre2[i]=122;
+                lettre2[i]=33;
+                
+
+            }
+            
+            printf("%c",lettre2[i]-1);
+        }
+        }
+
+   return 0;
+}
