@@ -1,1 +1,305 @@
-wach a boujemaa
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct{
+    char nom[10];
+    float prix,quantite,qntvnttabac;
+}tabac;
+typedef struct{
+    char nom[10];
+    float prix,quantite,qntvntjournaux;
+}jornaux;
+
+int main()
+{
+    float ajoute =0,ajtMrc =0,ajttabac=0,ajtJrnl=0,vntMrc=0,vnttabac=0,vntjrnl=0,total=0,total2=0;
+    tabac tabacs[5];
+    jornaux journal[5];
+    tabacs[0].prix=0 ,tabacs[1].prix=0,tabacs[2].prix=0,tabacs[3].prix=0,tabacs[4].prix=0;
+    tabacs[0].quantite=0,tabacs[1].quantite=0,tabacs[2].quantite=0,tabacs[2].quantite=0,tabacs[2].quantite=0;
+    journal[0].prix=0,journal[1].prix=0,journal[2].prix=0,journal[3].prix=0,journal[4].prix=0;
+    journal[0].quantite=0,journal[1].quantite=0,journal[2].quantite=0,journal[3].quantite=0,journal[4].quantite=0;
+    tabacs[0].qntvnttabac=0,tabacs[1].qntvnttabac=0,tabacs[2].qntvnttabac=0,tabacs[3].qntvnttabac=0,tabacs[4].qntvnttabac=0;
+    journal[0].qntvntjournaux=0,journal[1].qntvntjournaux=0,journal[2].qntvntjournaux=0,journal[3].qntvntjournaux=0,journal[4].qntvntjournaux=0;
+    do{
+    printf("--------------Date--??/??/????------------\n");
+    printf("================Menu======================\n");
+    printf("1 === ajout de marchandise en stock ======\n");
+    printf("2 === vente marchandise ==================\n");
+    printf("3 === chiffre d'affaire d'aoujourd'hui ===\n");
+    printf("4 === vente par produit aujourd'hui ======\n");
+    printf("5 === gain net vente aujourd'hui =========\n");
+    printf("6 === backup donnees =====================\n");
+    printf("7 === vue sur le Stock ===================\n");
+    printf("8 === Recup Donnee =======================\n");
+    printf("9 === quitter le programme ===============\n");
+    printf("================About=====================\n");
+    printf("Saka V 0.1 Beta\n");
+    printf("développé par M.AAJLI Ahmed .\n");
+    printf("corporate AAJLI Ahmed.\n");
+    printf("==========================================\n");
+    scanf("%f",&ajoute);
+        if(ajoute == 1){
+            do{
+            printf("============== 1 || Sous-Menu || Ajout marchandise ============\n");
+            printf("11 === ajout Tabac ============================================\n");
+            printf("12 === ajout Journaux =========================================\n");
+            printf("13 === Retour menu precedent ==================================\n");
+            scanf("%f",&ajtMrc);
+
+            if(ajtMrc==11){
+                    do{
+                printf("============== 11 || Sous-Menu || Ajout Tabac =================\n");
+                printf("111 === Marlboro ==============================================\n");
+                printf("112 === Marlboro LGT ==========================================\n");
+                printf("113 === Winston ===============================================\n");
+                printf("114 === Marquise ==============================================\n");
+                printf("115 === Casa ==================================================\n");
+                printf("116 === Retour menu precedent =================================\n");
+                scanf("%f",&ajttabac);
+
+                if(ajttabac==111){
+                    printf("============== 111 || Sous-Menu || Ajout Marlboro =============\n");
+                    printf("ENTER NOM  : ");
+                    scanf("%s",&tabacs[0].nom);
+                    printf("\n ENTER PRIX  : ");
+                    scanf("%f",&tabacs[0].prix);
+                    printf("\nENTER QUANTITé  : ");
+                    scanf("%f",&tabacs[0].quantite);
+                    printf("/n---->retour menu precedent <----------------------------------\n");
+                }
+                if(ajttabac==112){
+                    printf("============== 112 || Sous-Menu || Ajout Marlboro LGT =============\n");
+                    printf("ENTER NOM  : ");
+                    scanf("%s",&tabacs[1].nom);
+                    printf("\n ENTER PRIX  : ");
+                    scanf("%f",&tabacs[1].prix);
+                    printf("\nENTER QUANTITé  : ");
+                    scanf("%f",&tabacs[1].quantite);
+                    printf("/n---->retour menu precedent <----------------------------------\n");
+                }
+                if(ajttabac==113){
+                    printf("============== 113 || Sous-Menu || Ajout Winston =============\n");
+                    printf("ENTER NOM  : ");
+                    scanf("%s",&tabacs[2].nom);
+                    printf("\n ENTER PRIX  : ");
+                    scanf("%f",&tabacs[2].prix);
+                    printf("\nENTER QUANTITé  : ");
+                    scanf("%f",&tabacs[2].quantite);
+                    printf("/n---->retour menu precedent <----------------------------------\n");
+                }
+                if(ajttabac==114){
+                    printf("============== 114 || Sous-Menu || Ajout Marquise =============\n");
+                    printf("ENTER NOM  : ");
+                    scanf("%s",&tabacs[3].nom);
+                    printf("\n ENTER PRIX  : ");
+                    scanf("%f",&tabacs[3].prix);
+                    printf("\nENTER QUANTITé  : ");
+                    scanf("%f",&tabacs[3].quantite);
+                    printf("/n---->retour menu precedent <----------------------------------\n");
+                }
+                if(ajttabac==115){
+                    printf("============== 115 || Sous-Menu || Ajout Casa =============\n");
+                    printf("ENTER NOM  : ");
+                    scanf("%s",&tabacs[4].nom);
+                    printf("\n ENTER PRIX  : ");
+                    scanf("%f",&tabacs[4].prix);
+                    printf("\nENTER QUANTITé  : ");
+                    scanf("%f",&tabacs[4].quantite);
+                    printf("/n---->retour menu precedent <----------------------------------\n");
+                }
+
+
+            }while(ajttabac != 116);
+            }
+            if(ajtMrc==12){
+                do{
+                printf("============== 12 || Sous-Menu || Ajout Jouraux =================\n");
+                printf("121 === Al-Massae ==============================================\n");
+                printf("122 === Akhbar al yum ==========================================\n");
+                printf("123 === Opinion ===============================================\n");
+                printf("124 === le Matin ==============================================\n");
+                printf("125 === Economiste ==================================================\n");
+                printf("126 === Retour menu precedent =================================\n");
+                scanf("%d",&ajtJrnl);
+                if(ajtJrnl==121){
+                    printf("============== 121 || Sous-Menu || Ajout Al-Massae =============\n");
+                    printf("ENTER NOM  : ");
+                    scanf("%s",&journal[0].nom);
+                    printf("\n ENTER PRIX  : ");
+                    scanf("%f",&journal[0].prix);
+                    printf("\nENTER QUANTITé  : ");
+                    scanf("%f",&journal[0].quantite);
+                    printf("/n---->retour menu precedent <----------------------------------\n");
+                }
+                if(ajtJrnl==122){
+                    printf("============== 121 || Sous-Menu || Ajout Akhbar al yum =============\n");
+                    printf("ENTER NOM  : ");
+                    scanf("%s",&journal[1].nom);
+                    printf("\n ENTER PRIX  : ");
+                    scanf("%f",&journal[1].prix);
+                    printf("\nENTER QUANTITé  : ");
+                    scanf("%f",&journal[1].quantite);
+                    printf("/n---->retour menu precedent <----------------------------------\n");
+                }
+                if(ajtJrnl==123){
+                    printf("============== 123 || Sous-Menu || Ajout Opinion =============\n");
+                    printf("ENTER NOM  : ");
+                    scanf("%s",&journal[2].nom);
+                    printf("\n ENTER PRIX  : ");
+                    scanf("%f",&journal[2].prix);
+                    printf("\nENTER QUANTITé  : ");
+                    scanf("%f",&journal[2].quantite);
+                    printf("/n---->retour menu precedent <----------------------------------\n");
+                }
+                if(ajtJrnl==124){
+                    printf("============== 124 || Sous-Menu || Ajout le Matin =============\n");
+                    printf("ENTER NOM  : ");
+                    scanf("%s",&journal[3].nom);
+                    printf("\n ENTER PRIX  : ");
+                    scanf("%f",&journal[3].prix);
+                    printf("\nENTER QUANTITé  : ");
+                    scanf("%f",&journal[3].quantite);
+                    printf("/n---->retour menu precedent <----------------------------------\n");
+                }
+                if(ajtJrnl==125){
+                    printf("============== 125 || Sous-Menu || Ajout le Matin =============\n");
+                    printf("ENTER NOM  : ");
+                    scanf("%s",&journal[4].nom);
+                    printf("\n ENTER PRIX  : ");
+                    scanf("%f",&journal[4].prix);
+                    printf("\nENTER QUANTITé  : ");
+                    scanf("%f",&journal[4].quantite);
+                    printf("/n---->retour menu precedent <----------------------------------\n");
+                }
+
+                }while(ajtJrnl!=126);
+            }
+
+            }while(ajtMrc!=13);
+        }
+        if(ajoute == 2){
+                    do{
+                    printf("============== 2 || Sous-Menu || Vente marchandise ============\n");
+                    printf("21 === Vente Tabac ============================================\n");
+                    printf("22 === Vente Journaux =========================================\n");
+                    printf("23 === Retour menu precedent ==================================\n");
+                    scanf("%f",&vntMrc);
+                    if(vntMrc==21){
+                            do{
+                        printf("============== 21 || Sous-Menu || Vente Tabac =================\n");
+                        printf("211 === Marlboro ==============================================\n");
+                        printf("212 === Marlboro LGT ==========================================\n");
+                        printf("213 === Winston ===============================================\n");
+                        printf("214 === Marquise ==============================================\n");
+                        printf("215 === Casa ==================================================\n");
+                        printf("216 === Retour menu precedent =================================\n");
+                        scanf("%f",&vnttabac);
+
+                        if(vnttabac==211){
+                            printf("============== 211 || Sous-Menu || Vente Marlboro =============\n");
+                            printf("ENTER QUANTITé  :");
+                            scanf("%f",&tabacs[0].qntvnttabac);
+                            printf("\nPRIX : %f\n",tabacs[0].prix*tabacs[0].qntvnttabac);
+                            printf("/n---->retour menu precedent <----------------------------------\n");
+                        }
+                        if(vnttabac==212){
+                            printf("============== 212 || Sous-Menu || Vente Marlboro LGT =============\n");
+                            printf("ENTER QUANTITé  :");
+                            scanf("%f",&tabacs[1].qntvnttabac);
+                            printf("\nPRIX : %f\n",tabacs[1].prix*tabacs[1].qntvnttabac);
+                            printf("/n---->retour menu precedent <----------------------------------\n");
+                        }
+                        if(vnttabac==213){
+                            printf("============== 213 || Sous-Menu || Vente Winston =============\n");
+                            printf("ENTER QUANTITé  :");
+                            scanf("%f",&tabacs[2].qntvnttabac);
+                            printf("\nPRIX : %f\n",tabacs[2].prix*tabacs[2].qntvnttabac);
+                            printf("/n---->retour menu precedent <----------------------------------\n");
+                        }
+                        if(vnttabac==214){
+                            printf("============== 214 || Sous-Menu || Vente Marquise =============\n");
+                            printf("ENTER QUANTITé  :");
+                            scanf("%f",&tabacs[3].qntvnttabac);
+                            printf("\nPRIX : %f\n",tabacs[3].prix*tabacs[3].qntvnttabac);
+                            printf("/n---->retour menu precedent <----------------------------------\n");
+                        }
+                        if(vnttabac==215){
+                            printf("============== 215 || Sous-Menu || Vente Casa =============\n");
+                            printf("ENTER QUANTITé  :");
+                            scanf("%f",&tabacs[4].qntvnttabac);
+                            printf("\nPRIX : %f\n",tabacs[4].prix*tabacs[4].qntvnttabac);
+                            printf("/n---->retour menu precedent <----------------------------------\n");
+                        }
+
+                    }while(vnttabac != 216);
+
+                    }
+
+                    if(vntMrc==22){
+                            do{
+                        printf("============== 22 || Sous-Menu || Vente Journaux =================\n");
+                        printf("221 === Al-Massae ==============================================\n");
+                        printf("222 === Akhbar al yum ==========================================\n");
+                        printf("223 === Opinion ===============================================\n");
+                        printf("224 === le Matin  ==============================================\n");
+                        printf("225 === Economiste ==================================================\n");
+                        printf("226 === Retour menu precedent =================================\n");
+                        scanf("%f",&vntjrnl);
+
+                        if(vntjrnl==221){
+                            printf("============== 221 || Sous-Menu || Vente Al-Massae =============\n");
+                            printf("ENTER QUANTITé  :");
+                            scanf("%f",&journal[0].qntvntjournaux);
+                            printf("\nPRIX : %f\n",journal[0].prix*journal[0].qntvntjournaux);
+                            printf("/n---->retour menu precedent <----------------------------------\n");
+                        }
+                        if(vntjrnl==222){
+                            printf("============== 222 || Sous-Menu || Vente Akhbar al yum =============\n");
+                            printf("ENTER QUANTITé  :");
+                            scanf("%f",&journal[1].qntvntjournaux);
+                            printf("\nPRIX : %f\n",journal[1].prix*journal[1].qntvntjournaux);
+                            printf("/n---->retour menu precedent <----------------------------------\n");
+                        }
+                        if(vntjrnl==223){
+                            printf("============== 223 || Sous-Menu || Vente Opinion =============\n");
+                            printf("ENTER QUANTITé  :");
+                            scanf("%f",&journal[2].qntvntjournaux);
+                            printf("\nPRIX : %f\n",journal[2].prix*journal[2].qntvntjournaux);
+                            printf("/n---->retour menu precedent <----------------------------------\n");
+                        }
+                        if(vntjrnl==224){
+                            printf("============== 224 || Sous-Menu || Vente le Matin  =============\n");
+                            printf("ENTER QUANTITé  :");
+                            scanf("%f",&journal[3].qntvntjournaux);
+                            printf("\nPRIX : %f\n",journal[3].prix*journal[3].qntvntjournaux);
+                            printf("/n---->retour menu precedent <----------------------------------\n");
+                        }
+                        if(vntjrnl==225){
+                            printf("============== 225 || Sous-Menu || Vente Economiste =============\n");
+                            printf("ENTER QUANTITé  :");
+                            scanf("%f",&journal[4].qntvntjournaux);
+                            printf("\nPRIX : %f\n",journal[4].prix*journal[4].qntvntjournaux);
+                            printf("/n---->retour menu precedent <----------------------------------\n");
+                        }
+
+
+                            }while(vntjrnl != 226);
+                }
+                }while(vntMrc!=23);
+        }
+
+
+        if(ajoute == 3){
+                total = (tabacs[0].qntvnttabac*tabacs[0].prix+tabacs[1].qntvnttabac*tabacs[1].prix+tabacs[2].qntvnttabac*tabacs[2].prix+tabacs[3].qntvnttabac*tabacs[3].prix+tabacs[4].qntvnttabac*tabacs[4].prix);
+                total2 = (journal[0].qntvntjournaux*journal[0].prix+journal[1].qntvntjournaux*journal[1].prix+journal[2].qntvntjournaux*journal[2].prix+journal[3].qntvntjournaux*journal[3].prix+journal[4].qntvntjournaux*journal[4].prix);
+                printf("\nTOTAL VENTE Aujourd'hui : %f\n",total+total2);
+                printf("\nTABAC : %f\n",total);
+                printf("\njOURNAUX : %f\n",total2);
+                printf("__________menu________________\n");
+        }
+
+
+    }while(ajoute != 9);
+           return 0;
+}
+
