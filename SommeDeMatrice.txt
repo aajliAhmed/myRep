@@ -1,0 +1,79 @@
+
+#include <stdio.h>
+int main()
+{
+  int matrice[10][10] ;
+  int matrice2[10][10];
+  int matrice3[10][10];
+  int lignes, colonne;
+  int lignes2, colonne2;
+  
+   printf(" Entrez le nombre de lignes  : ");
+   scanf("%d",&lignes);
+   printf(" Entrez le nombre de colonne : ");
+   scanf("%d",&colonne);
+  
+  for(int i=0;i<lignes;i++){
+    for(int j=0; j<colonne;j++){
+      scanf("%d",&matrice[i][j]);
+    }
+  }
+  
+  for(int i=0;i<lignes;i++){
+    for(int j=0;j<colonne;j++){
+      printf("%4d",matrice[i][j]);
+    }
+    printf("\n");
+  }
+  
+ printf(" Entrez le nombre de lignes2  : ");
+   scanf("%d",&lignes2);
+   printf(" Entrez le nombre de colonne2 : ");
+   scanf("%d",&colonne2);
+  
+  for(int i=0;i<lignes2;i++){
+    for(int j=0;j<colonne2;j++){
+      scanf("%d",&matrice2[i][j]);
+    }
+  }
+   
+  for(int i=0;i<lignes2;i++){
+    for(int j = 0; j<colonne2;j++){
+      printf("%4d",matrice2[i][j]);
+    }
+    printf("\n");
+  }
+  
+  if(lignes2==lignes && colonne2==colonne){
+printf("la de deux matrices de memes lignes et colonnes : \n\n");
+      for(int i=0;i<lignes;i++){
+          for(int j=0;j<colonne;j++){
+              matrice3[i][j]=matrice2[i][j]+matrice[i][j];
+
+          }
+      }
+      
+      for(int i=0;i<lignes2;i++){
+    for(int j = 0; j<colonne2;j++){
+      printf("%4d",matrice3[i][j]);
+    }
+    printf("\n");
+  }
+      
+}
+else if(lignes2==lignes && colonne2!=colonne){
+printf("Impossible de faire la somme de deux matrices parcque les colonnes sont differant ");
+}
+else if(lignes2!=lignes && colonne2==colonne){
+printf("Impossible de faire la somme de deux matrices parcque les lignes sont differant ");
+}
+else if(lignes2!=lignes && colonne2!=colonne){
+printf("Impossible de faire la somme de deux matrices parcque les lignes et les colonnes sont differants ");
+}
+
+   return 0;
+}
+
+  
+
+
