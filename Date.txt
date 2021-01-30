@@ -11,13 +11,24 @@ Code, Compile, Run and Debug online from anywhere in world.
 int main()
 {
     int jour,mois,annee;
-    printf("entrer jour,mois,annee :");
-    scanf("%d %d %d",&jour,&mois,&annee);
     
-    printf("jour :%d\n",jour);
-    printf("mois :%d\n",mois);
-    printf("annee :%d\n",annee);
-    printf("%d-%d-%d",jour,mois,annee);
-
+    printf("entrer jour:");
+    scanf("%d",&jour);
+    printf("entrer mois:");
+    scanf("%d",&mois);
+    printf("entrer annee :");
+    scanf("%d",&annee);
+    
+    if (jour>0 && jour<32 && mois>0 && mois<13 && annee>0 && annee<4000 ){
+        printf("jour :%d\n",jour);
+        printf("mois :%d\n",mois);
+        printf("annee :%d\n",annee);
+        printf("La date :%d-%d-%d",jour,mois,annee);
+       
+    }
+    else {
+        printf("La date incorricte ");
+    }
+    
     return 0;
 }
