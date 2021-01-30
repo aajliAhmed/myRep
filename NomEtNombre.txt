@@ -1,0 +1,52 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+C#, VB, Perl, Swift, Prolog, Javascript, Pascal, HTML, CSS, JS
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+typedef struct {
+    char nom[25];
+    char tele[10];
+}PERS;
+
+int main()
+{
+    PERS pers[3];
+    int choix;
+    char Recherche[25];
+    
+    for(int i=0;i<3;i++){
+        printf(" entrer le Nom %d : ",i+1);
+        scanf("%s",pers[i].nom);
+        printf("entrer le numero %d : ",i+1);
+        scanf("%s",pers[i].tele);
+    }
+    do{
+    printf("1-affichage de repertoire\n");
+    printf("2-Recherche un nombre par un nom\n");
+    printf("3-Quitter le programme  \n");
+    printf("votre choix : ");
+    scanf("%d",&choix);
+    
+    if(choix==1){
+        for(int i=0;i<3;i++){
+            printf("le nom : %s\n",pers[i].nom);
+            printf("le numero : %s\n\n ",pers[i].tele);
+        }
+    }
+    else if(choix==2){
+        printf("entrer un nom : ");
+        scanf("%s",&Recherche);
+        for(int i=0;i<3;i++){
+           if(strcmp (Recherche,pers[i].nom)==0){
+           printf("%s\n\n",pers[i].tele);
+          } 
+        }
+    }
+}while(choix!=3);
+
+    return 0;
+}
