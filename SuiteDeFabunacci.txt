@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main()
+{
+    int A=0;
+    int B=1;
+    int F;
+    int n;
+    B=1;
+    printf("enter N : ");
+    scanf("%d",&n);
+    
+        if(n==0){
+            printf("%d",A);
+        }
+        if(n==1){
+            printf("%d",B);
+        }
+        
+        else{
+            for(int i=2;i<n;i++){
+            F=A+B;
+            A=B;
+            B=F;
+        }
+    }
+    printf("%d",F);
+      
+    
+    return 0;
+}
