@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void Nombres();
+void Comparer();
+void affichage();
+
+int main()
+{
+    Nombres();
+    Comparer();
+    affichage();
+    return 0;
+}
+
+void Nombres(){
+    int tab[10];
+    for(int i=0;i<10;i++){
+           printf("entrer le nombre %d : ",i+1);
+           scanf("%d",&tab[i]);
+    }
+    printf("\n\n");
+}
+
+
+void Comparer(){
+    int choix;
+    int tab[10];
+    for(int i=0;i<10;i++){
+        for(int y=i+1;y<10;y++){
+            if(tab[i]>tab[y]){
+                
+                choix=tab[i];
+                tab[i]=tab[y];
+                tab[y]=choix;
+            }
+        }  
+    }
+}
+
+void affichage(){
+    int tab[10];
+    printf("Tableau tri par ordre croissant : \n");
+    for(int i=0;i<10;i++){
+           printf("%d ",tab[i]);
+    }
+    
+}
+
+
+
+
+
+
+
