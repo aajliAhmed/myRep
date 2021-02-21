@@ -1,0 +1,85 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+C#, VB, Perl, Swift, Prolog, Javascript, Pascal, HTML, CSS, JS
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+void Menu(){
+  printf("\n0 - --------Menu--------\n");
+  printf("1 - Decimal vers Binaire \n");
+  printf("2 - Binaire vers Decimal \n");
+  printf("3 - Quitter le programme \n");
+  printf("votre choix : ");
+}
+
+void Binaire (){
+    int nbr;
+  int tab[15],i;  
+  
+  printf("Entrez le nombre à convertir: ");  
+  scanf("%d",&nbr);  
+  do{
+      
+  for(i=0; nbr>0; i++){ 
+      
+    tab[i] = nbr%2;  
+    nbr = nbr/2;
+    printf(" %d->%d\n",nbr,tab[i]);
+  }
+  
+  }while(nbr!=0);
+  
+  printf("\nLe nombre binaire est =  ");
+  
+  for(i=i-1; i>= 0; i--)  
+  {  
+    printf("%d",tab[i]);  
+  }  
+  
+}
+
+void Decimal (){
+    
+int nbr,N,A=0;
+int tab[25];
+printf("Combien de nombre tu va entrer (MAX = 15 ): ");
+scanf("%d",&N);
+
+for(int i=N-1;i>=0;i--){
+    printf(" bit %d :",N-i);
+    scanf("%d",&tab[i]);
+}
+
+for(int i=0;i<N;i++){
+    A=A+tab[i]*pow(2,i);
+}
+ printf("Nombre en Decimal est : %d",A);
+}
+
+int main()
+{
+    int choix;
+    
+  do{
+      
+  Menu();
+  scanf("%d",&choix
+  
+  if(choix==1){
+    Binaire ();
+  }
+  
+  if(choix==2){
+    Decimal ();
+  }
+  
+}while(choix!=3);
+
+  printf("Merci :)");
+  
+  return 0;
+}
