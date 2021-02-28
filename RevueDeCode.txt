@@ -1,0 +1,65 @@
+Ex1 : Factorail
+
+ 	boucle While ;
+
+Ex2 : Matrice
+
+ 	il utilise tableau de 2 dimension 
+
+  probleme d'affichage ; 
+
+Ex3 : PlusPetit
+
+	probleme d'affichage ;
+
+Ex4 : Triangle
+
+	il travail avec 3 des boucles FOR ; 
+
+	bien ;
+
+Ex5 : Date 
+
+	bien ;
+
+Ex6 : Fabunatci 
+
+	affiche une seul nombre ;
+
+Ex7 : Paire 
+
+	il utilise une boucle do..while pour sortie c'est le programme trouve 1 et une variable qui calcule nombre d'itération ;
+
+	bien ; 
+
+Ex8 : Tele
+
+	il travail avec les structure et les fontions et boucle do..while ;
+
+	bien 
+
+Ex9 : criossante
+	
+il comparie i et i+1 il stocki le nombre plus grand dans le variable apres ila contenu de comparaison ;
+  
+	bien ;
+
+Ex10 : Supp le 0
+
+	il travail avec boucle FOR ila enregistre les nombres quelle different le 0 dans autre tableau avec condition IF a la fin ila fiche les nombres sont 0    
+
+	probleme d'affichage d'entres les nombres ;
+
+Ex12 : plus grand Et petit et leur position 
+
+	il utilise une tableau et boucle FOR pour comparie les nombres et deux varaibles pour enregistre le nombre puls grand et petit avec une condition IF ;
+
+	l'affichage bien ;  
+
+Ex16 : Suit Un
+	
+	il utilise une boucle FOR ;
+
+	il travail avec trois varailbles ;
+
+	bien ;
