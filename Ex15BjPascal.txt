@@ -1,0 +1,44 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+C#, VB, Perl, Swift, Prolog, Javascript, Pascal, HTML, CSS, JS
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+
+void Pascal (){
+    int tab[15][15];
+    int N;
+    tab[0][0]=1;
+    
+    scanf("%d",&N);
+    for(int i=1;i<=N;i++){
+        
+        tab[i][0]=tab[i][i]=1;
+    for(int j=1;j<i;j++){
+        
+        tab[i][j]=tab[i-1][j-1]+tab[i-1][j];
+        }
+    }
+
+for(int i=1;i<=N;i++){
+    printf("\n");
+    for(int j=1;j<=i;j++){
+    printf("%4d",tab[i-1][j-1]);
+    }
+
+   } 
+}
+
+int main()
+{
+    int tab[15][15];
+    
+    printf("Triangle de Pascal \n");
+    printf("Entrer Nombre deS lignes (Max=15) : ");
+    Pascal ();
+    
+        return 0;
+}
