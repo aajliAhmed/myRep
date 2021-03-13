@@ -1,0 +1,50 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+  int tab[9];
+  printf("**********Soduko 3x3***********  \n");
+  for(int i=0;i<9;i++){
+      printf("entrer nombre %d :",i+1);
+      scanf("%d",&tab[i]);
+  }
+  
+        printf("\n");
+   for(int i=0;i<3;i++){
+            printf("%4d",tab[i]);
+        }
+        printf("\n");
+  for(int i=3;i<6;i++){
+            printf("%4d",tab[i]);
+        }
+        printf("\n");
+  for(int i=6;i<9;i++){
+            printf("%4d",tab[i]);
+        }
+        
+        
+  for(int i=0;i<9;i++){
+      for(int y=i+1;y<9;y++){
+       if(tab[i]==tab[y]){
+     printf("\n==>Soduko est incorrect \n");
+        }
+      }
+  
+  }
+
+     for(int i=0;i<9;i++){
+      if(tab[i]>=10 || tab[i]==0){
+     printf("\n==>Le Nombre entrer dans la case %d incorrect \n",i+1) ;
+  }
+}
+
+    return 0;
+}
