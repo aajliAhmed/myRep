@@ -1,0 +1,47 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    System.out.println("****Determiner le Siecle ****");
+	    System.out.println("Entrer nombre par nombre Exemple :\n1 \n1 \n1 \n1 ");
+	    System.out.println("entrer l'annee : ");
+	   siecle();
+	}
+	
+	public static void siecle(){
+	     Scanner Tableau = new Scanner(System.in);
+	     int[] tab = new int[4];
+	     
+	    for(int i=0;i<4;i++){
+	       tab[i] = Tableau.nextInt();
+	    }
+if(tab[0]>=0 && tab[0]<=9 && tab[1]>=0 && tab[1]<=9 && tab[2]>=0 && tab[2]<=9 && tab[3]>=0 && tab[3]<=9){
+       if (tab[2]==0 && tab[3]==0){
+            System.out.println("Le siecle est : "+tab[0]+tab[1]);
+       }
+      if(tab[1]>=0 && tab[1]<9){
+       if(tab[2]!=0 || tab[3]!=0){
+           System.out.println("Le siecle est : "+tab[0]+(tab[1]+1));
+       }
+      }
+      if(tab[1]==9){
+       if(tab[2]!=0 || tab[3]!=0){
+           System.out.println("Le siecle est : "+(tab[0]+1)+0);
+       }
+      }
+	}
+	else {
+	    System.out.println("Les information entrer incorrect");
+	}
+}
+}
