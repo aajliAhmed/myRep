@@ -1,0 +1,84 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+        int P;
+        int tarif=10;
+        int tarif2=5;
+        int francs;
+        int francs2;
+        int francs3;
+        int francs4;
+        int A,B,C,D;
+	     Scanner Debut =new Scanner(System.in);
+         Scanner Fin = new Scanner(System.in);
+	    
+	    System.out.println("la durée maximmale de connexion est 23h ;\n");
+	    System.out.println("*tarif 1 de 1h a 7h   ==> 5 DH/h;;\n");
+	    System.out.println("*tarif 2 de 7h a 17h  ==> 10 DH/h ;\n");
+	    System.out.println("*tarif 3 de 17h a 24h ==> 5 DH/h;\n");
+	    System.out.println("Toujour Fin > Debut .\n");
+	    
+		System.out.print("Entrer la Debut de connexion  : ");
+		int debut = Debut.nextInt();
+		System.out.print("Entrer la Fin de connexion : ");
+		int fin = Fin.nextInt();
+		
+		if(debut>=1 && debut<=24 && fin>=1 && fin<=24 ){
+	
+		        P=fin-debut;
+		    System.out.println("\nVous avez ete connecte "+P+" heures\n");
+		
+		        if(debut>=7 && debut<17 && fin>=8 && fin<=17){
+		            francs=P*tarif;
+		   System.out.println("Paye : " +francs+" DH");
+		        }
+		        
+		        else if(debut>=1 && debut<7 && fin>=2 && fin<7){
+		           francs2=P*tarif2;
+		    System.out.println("Paye : " +francs2+" DH");
+	            }
+	            
+	            else if(debut>17 && debut<=24 && fin>=18 && fin<=24){
+		           francs2=P*tarif2;
+		    System.out.println("Paye : " +francs2+" DH");
+	            }
+	            
+	            
+	            else if(debut>=7 && debut<=24 && fin>=8 && fin<=24){
+	                A=17-debut;
+	                B=fin-17;
+	                francs3=A*tarif+B*tarif2;
+	               System.out.println("Paye : " +francs3+" DH"); 
+	            }
+	            
+	            else if(debut>=1 && debut<=17 && fin>=2 && fin<17){
+	                 C=7-debut;
+	                 D=fin-7;
+	                francs4=C*tarif2+D*tarif;
+	                System.out.println("Paye : " +francs4+" DH"); 
+	            }
+	            
+	              else if(debut>=1 && debut<=24 && fin>=2 && fin<=24){
+	                 C=7-debut;
+	                 D=fin-17;
+	                francs4=C*tarif2+D*tarif2+100;
+	                System.out.println("Paye : " +francs4+" DH"); 
+	            }
+  
+		}
+	    else{
+	       System.out.println("Les informations entrees est incorrect "); 
+	    }
+   
+}
+}
