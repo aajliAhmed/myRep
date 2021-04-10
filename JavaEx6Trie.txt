@@ -1,0 +1,51 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner Tableau =new Scanner(System.in);
+	   
+	    int [] tab = new int [10];
+	    int A;
+	    for(int i=0;i<10;i++){
+		    System.out.print("entrer nombre "+(i+1)+" : ");
+		    tab[i] = Tableau.nextInt();
+		}
+		System.out.println("\nLes nombres tries par ordre croissant :\n");
+		
+		for(int i=0;i<10;i++){
+		    for(int y=i+1;y<10;y++){
+		        if(tab[i]>tab[y]){
+		            A=tab[i];
+		            tab[i]=tab[y];
+		            tab[y]=A;
+		        }
+		    }
+		}
+		 for(int i=0;i<10;i++){
+		    System.out.println("Nombre "+(i+1)+" : "+tab[i]);
+		}
+	    System.out.println("\nLes nombres tries par ordre decroissant :\n");
+	    	for(int i=0;i<10;i++){
+		    for(int y=i+1;y<10;y++){
+		        if(tab[i]<tab[y]){
+		            A=tab[i];
+		            tab[i]=tab[y];
+		            tab[y]=A;
+		        }
+		    }
+		}
+		 for(int i=0;i<10;i++){
+		    System.out.println("Nombre "+(i+1)+" : "+tab[i]);
+		}
+	    
+	}
+}
