@@ -1,0 +1,34 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner nombre=new Scanner(System.in);
+	    double P;
+	    
+	    System.out.println("On a la polynome P=A+B+C+((A+B)/2)*(X^3)+((A+B)^2)*(X^2) .\n");
+		System.out.print("entrer A (int) :");
+		int A = nombre.nextInt();
+		System.out.print("entrer B (int) :");
+		int B = nombre.nextInt();
+		System.out.print("entrer C (int) :");
+		double C = nombre.nextDouble();
+		System.out.print("entrer X (double) :");
+		double X = nombre.nextDouble();
+        
+        double N=A+B;
+     
+        P=N+C+((N)/2)*Math.pow(X,3)+Math.pow(N,2)*Math.pow(X,2);
+        
+        System.out.println("La valeur du polynome P est : "+P);
+
+	}
+}
