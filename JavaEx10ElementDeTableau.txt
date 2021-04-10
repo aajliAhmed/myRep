@@ -1,0 +1,35 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner Tableau =new Scanner(System.in);
+	    Scanner Nombre =new Scanner(System.in);
+	    int [] tableau = new int [5];
+	
+	    for(int i=0;i<5;i++){
+		    System.out.print("entrer nombre "+(i+1)+" : ");
+		    tableau[i] = Tableau.nextInt();
+		}
+		
+		System.out.print("\nentrer nombre : ");
+		    int nbr = Nombre.nextInt();
+		
+		for(int i=0;i<5;i++){
+		    if(nbr==tableau[i]){
+		     System.out.println("\nNombre est dans la case "+(i+1));
+		 }
+		 else{
+		     System.out.println("\nNombre n'est pas dans la case "+(i+1));
+		 }
+		} 
+	}
+}
