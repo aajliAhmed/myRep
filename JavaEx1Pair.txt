@@ -1,0 +1,22 @@
+
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    Scanner nombre = new Scanner(System.in); 
+	    
+		System.out.print("entrer un nombre : ");
+		int nbr =nombre.nextInt();
+		
+		if (nbr%2==0){
+		    System.out.println("Nombre est pair ");
+		}
+		
+		else if (nbr%2!=0){
+		   System.out.println("Nombre est impair "); 
+		} 
+        
+	}
+}
