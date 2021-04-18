@@ -1,0 +1,47 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+		int A,grand=0;
+		A=adjacenteElementProduct(grand);
+		
+	}
+	public static int adjacenteElementProduct(int plusGrand){
+		Scanner scanf = new Scanner(System.in);
+		int nombre;
+		int resultat;
+	    int tableau[] = new int[25];
+	    int valeur[] = new int[25];
+	    System.out.print("Combaine de nombre tu va entrer : ");
+	    nombre=scanf.nextInt();
+	    
+	       for(int i=0;i<nombre;i++){
+	        System.out.print(("entrer le nombre ")+(i+1)+(": "));  
+	        tableau[i] = scanf.nextInt();
+	         }
+	       for(int i=0;i<nombre-1;i++){
+	        valeur[i]=tableau[i]*tableau[i+1]; 
+	        System.out.println(("valeur : ")+valeur[i]);
+	        }
+	        for(int i=0;i<nombre;i++){
+	            plusGrand=valeur[0];
+	           for(int y=i+1;y<nombre;y++){
+	         if(valeur[i]<valeur[y]){
+	             plusGrand=valeur[y];
+	             valeur[i]=plusGrand;
+	            }
+	           }
+	        }
+	        System.out.println("le plus grand multiplication adjacente est "+plusGrand);
+	        return plusGrand ;
+	}
+}
