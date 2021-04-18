@@ -1,0 +1,33 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    Scanner scanf = new Scanner(System.in);
+	    int nombre1,nombre2,resultat;
+	    System.out.println("***** la Somme *****");
+	    System.out.print("entrer nombre1 = ");
+	    nombre1 = scanf.nextInt();
+	    System.out.print("entrer nombre2 = ");
+	    nombre2 = scanf.nextInt();
+        resultat=somme(nombre1 ,nombre2);
+	    System.out.println("\nLa Somme de nombre1 et nombre2 = "+resultat);
+	}
+	
+	public static int somme (int nombre01 ,int nombre02){
+	    
+	     int resultat2;
+	     resultat2= nombre01 + nombre02 ;
+	     return resultat2 ;
+	    
+	}
+}
