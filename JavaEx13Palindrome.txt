@@ -1,0 +1,35 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+	    Scanner scanf =new Scanner(System.in);
+	    String  palindrome;
+	    boolean bool;
+	    
+	    System.out.print("Entrer le mot : ");
+	    palindrome=scanf.nextLine();
+	    bool = checkPalindrome(palindrome);
+	    System.out.println("reponse : "+bool);
+ 
+    }   
+	public static boolean checkPalindrome (String chaine){
+	    String chaine2="";
+	    
+	    boolean reponse=true;
+	    for(int i =chaine.length()-1;i>=0;i--){
+           chaine2 = chaine2 + chaine.charAt(i);
+       }
+        reponse =chaine.equals(chaine2);
+	    return reponse;
+	}
+}
+
