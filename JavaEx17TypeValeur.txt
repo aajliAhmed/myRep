@@ -1,0 +1,25 @@
+
+byte b1=10 , b2=20 ;
+
+short p=200 ;
+											-128<byte<127
+											-32768<short<32767
+											double.xxxxxxxx > float.xxxx 
+int n=500 ;
+
+long q=100 ;
+
+float x=2.5f ;
+
+double y=5.25 ;
+---------------------------------
+
+b1+b2 => byte r=30 ;
+p+b1 => int r=210 ;
+b1*b2 => int r=200 ;
+q+p*(b1+b2) => long r=6100;
+x+q*n => float r=50002.5;
+b1*q/x => float r=400.0;
+b1*q*2./x => double r=800.0;
+b1*q*2.f/x =>float r=800.0;
+
