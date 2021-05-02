@@ -1,0 +1,38 @@
+
+double x1=1.200, x2=1.210;
+double y,z;
+----------------------------------------
+y=x2*x1;
+System.out.println("valeur de y : "+y);
+y=1.452;
+----------------------------------------
+x2=x1;
+z=y/(x1-x2);
+incorrecte ;
+----------------------------------------
+y=15;
+z=y/(x1-x2);
+incorrecte ;
+----------------------------------------
+z=(x1-x2)/(x1-x2)
+incorrecte ;
+----------------------------------------
+x1=Float.POSITIVE_INFINITY;
+x2=Double.NEGATIVE_INFINITY;
+z=x2/x1;
+incorrecte ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
