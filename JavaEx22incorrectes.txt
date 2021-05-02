@@ -1,0 +1,41 @@
+byte b ;
+
+short p ;
+
+int n ;
+
+long q ;
+
+final int N=10 ;
+float x ;
+ 
+double y ;
+
+--------------------------------------
+
+b = n incorrecte (byte =/= int ) ; //1
+
+b=25  correcte ; //2
+
+b=500 incorrecte ( -128<byte<127 ) ; //3
+
+x=2*q correcte ; //4
+
+y=b*b correcte ; //5
+
+p=b*b incorrecte (byte =/= short) ; //6
+
+b=b+5 incorrecte (5=int =/= b=byte) ; //7
+
+p=5*N-3 correcte ; //8
+
+
+
+
+
+
+
+
+
+
+
