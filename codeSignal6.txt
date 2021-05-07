@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+	    
+	    Scanner scanf =new Scanner(System.in);
+	    int tab[] = new int [10];
+	    int A=0;
+	    int B=0;
+	    int C=0;
+	    
+	    for(int i=0;i<4;i++){
+	        System.out.print("nombre "+(i+1)+" : ");
+	        tab[i]= scanf.nextInt();
+	    }
+	    for(int i=0;i<4;i++){
+	        for(int j=i+1;j<4;j++){
+	            if(tab[i]>tab[j]){
+	                A=tab[i];
+	                tab[i]=tab[j];
+	                tab[j]=A;
+	            }
+	        }
+	        System.out.print("-"+tab[i]+"-");
+	    }
+	    for(int i=0;i<4;i++){
+	        if((tab[i+1]-tab[i])>1){
+	            B=B+(tab[i+1]-tab[i])-1;
+	         
+	            System.out.print("/*"+B+"*/");
+	        }
+	    }
+	        
+	        
+	    
+	}
+}
