@@ -1,0 +1,18 @@
+A : i=0 n=1;
+B : i=11 n=11;
+C : i=21 j=6 n=120;
+D : i=18 j=18 ;
+E : i=12 j=12 n=4 ;
+
+------------------------------
+Ex 24 :
+
+1 vrai
+2 vrai
+3 vrai
+4 incorrect
+5 incorrect
+6 incorrect
+7 vrai
+8 vrai 
+9 vrai 
