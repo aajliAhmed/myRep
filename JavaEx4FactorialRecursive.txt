@@ -1,0 +1,31 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		Scanner scanf = new Scanner(System.in);
+		int nombre =0;
+		int resultat=0;
+		
+		System.out.print("entrer un nombre : ");
+		nombre =scanf.nextInt();
+		resultat = factorial(nombre);
+		System.out.print("resultat est : "+resultat);
+	}
+	public static int factorial (int n){
+	  
+	     if (n == 1){ 
+	        return 1;
+	     }
+        return n * factorial (n-1);
+	}
+}
