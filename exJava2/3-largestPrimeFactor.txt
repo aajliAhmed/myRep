@@ -1,0 +1,46 @@
+
+    Exercice 3 :
+
+The prime factors of 13195 are 5, 7, 13 and 29.
+
+What is the largest prime factor of the number 600851475143 ?
+
+    Answer : 
+
+
+import java.util.Scanner;
+import java.lang.Integer;
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner scanf = new Scanner(System.in);
+        String nombre="";
+        String affichage="";
+        System.out.println("Entrer un nombre : ");
+        nombre = scanf.next();
+        affichage=somme(nombre);
+        System.out.println("resultat = "+affichage);
+    }
+    public static String somme(String n){
+        long r=0;
+        long C=0;
+        long nombre=1;
+        String A="";
+        C=Long.parseLong(n);
+
+         while(nombre <=C){
+         r=0;
+         nombre++;
+         for (long i=1 ; i<=nombre ; i++){
+            if (nombre%i==0 && C%nombre==0){ 
+                r++;
+                System.out.println("-"+A+"-");
+         }
+    }
+         if(r==2){
+            A=String.valueOf(nombre);
+         }
+   }
+        return A;
+    }
+}
