@@ -1,0 +1,53 @@
+Problem 9
+
+A Pythagorean triplet is a set of three natural numbers, a < b < c, for which,
+a2 + b2 = c2
+
+For example, 32 + 42 = 9 + 16 = 25 = 52.
+
+There exists exactly one Pythagorean triplet for which a + b + c = 1000.
+Find the product abc.
+
+	Answer :
+
+	import java.util.Scanner;
+import java.lang.Math;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    Scanner scanf = new Scanner(System.in);
+	    int A=0;
+	    int tab[] = new int[10000];
+	    int tab2[] = new int[10000];
+	    int tab3[] = new int[10000];
+        
+        for(int i=1;i<10000;i++){
+            tab[i]=(int)Math.pow(i,2);
+            tab2[i]=(int)Math.pow(i,2);
+            tab3[i]=(int)Math.pow(i,2);
+        }
+            
+        for(int i=1;i<10000;i++){
+            for(int j=i;j<10000;j++){
+                for(int k=0;k<10000;k++){
+                if(tab[i]+tab2[j]==tab3[k] && i+j+k==1000){
+                    //System.out.println("******************i = "+i);
+                    //System.out.println("*tab[i] = "+tab[i]);
+                    //System.out.println("******************j = "+j);
+                    //System.out.println("**tab3[j] = "+tab2[j]);
+                    //System.out.println("******************k = "+k);
+                    //System.out.println("***tab3[k] = "+tab3[k]);
+                    
+                        System.out.println("###################### i = "+i);
+                        System.out.println("###################### j = "+j);
+                        System.out.println("###################### k = "+k);
+                        A=i*j*k;
+                        System.out.println("i*j*k = "+A);
+                }
+            }
+            }
+        }
+    }
+}

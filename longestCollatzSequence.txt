@@ -1,0 +1,41 @@
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		long nombre =0;
+		long A=0;
+		long conteur=0;
+		long B=0;
+		long i=0;
+		Scanner scanf = new Scanner(System.in);
+		
+		System.out.println("Entrer un nombre : ");
+		nombre = scanf.nextInt();
+		
+		    while(i<nombre){
+		        conteur=0;
+		        i++;
+		        A=i;
+		       do{
+		    if(A%2==0){
+		        A=A/2;
+		        conteur++;
+		        //System.out.println("********* : "+A+" -------- conteur = "+conteur);
+		    }
+		    else{
+		        A=A*3+1;
+		        conteur++;
+		        //System.out.println("********* : "+A+" -------- conteur = "+conteur);
+		    }
+		   if(B<conteur){
+
+            B=conteur;
+            System.out.println("********* : "+i+" -------- conteur = "+conteur);
+            //System.out.println("-------->B "+B);
+		    }
+	    	}while(A!=1); 
+		    }
+	}
+}
