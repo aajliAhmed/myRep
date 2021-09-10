@@ -1,0 +1,35 @@
+	
+	Exercice 1 :	
+
+If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+
+Find the sum of all the multiples of 3 or 5 below 1000.
+
+	Answer :
+
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+        Scanner scanf = new Scanner(System.in);
+        int nombre=0;
+        int affichage=0;
+        System.out.println("Entrer un nombre : ");
+        nombre = scanf.nextInt();
+        affichage=somme(nombre);
+        System.out.println("resultat = "+affichage);
+	}
+	public static int somme(int N){
+	    int nombre1 =3;
+		int nombre2 =5;
+		int resultat=0;
+		for(int i=1;i<N;i++){
+		    if(i%nombre1==0 || i%nombre2==0 ){
+		        resultat=resultat+i;
+		    }
+		}
+		return resultat;
+	    
+	}
+}
