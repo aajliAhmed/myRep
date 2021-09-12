@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Main 
+{
+	public static void main(String[] args) {
+		
+		long nombre=0;
+		long B=0;
+		long conteur=0;
+		Scanner scanf = new Scanner(System.in);
+
+		System.out.print("Entrer un nombre : ");
+		nombre =scanf.nextInt();
+
+		for(long i=1;i<nombre;i++){
+			B=B+i;
+			conteur=0;
+			for(long j=1;i<B;j++){
+				if(B%j==0){
+					System.out.print("B = "+B+" ------------ j = "+j);
+					conteur++;
+					System.out.print("conteur = "+conteur);
+				}
+				if (conteur==500) {
+					break;					
+				}
+
+			}
+		}
+	}
+}

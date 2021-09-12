@@ -1,0 +1,55 @@
+Problem 7 :
+
+By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+
+What is the 10 001st prime number?
+
+	Answer :
+
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+        
+        Scanner scanf = new Scanner(System.in);
+        
+        int n=0;
+        int res=0;
+        
+        
+    System.out.println("entrez un nombre : ");
+    n = scanf.nextInt();
+    res = affichage(n);
+    System.out.println("le nombre est : "+res);
+    
+    
+    }
+    public static int affichage(int n){
+        
+    int A=0;
+    int nombre=0;
+    int conteur=0;
+    int resultat=0;
+    
+    for(int i=nombre ;i<=n;i++){
+        if(A<10001){
+         conteur=0;
+         for (int j=1 ; j<=i ; j++){
+            if (i%j==0){ 
+                conteur++;
+         }
+        }
+         if(conteur==2){
+             A++;
+            //System.out.println("*** A = "+A);
+            //System.out.println("- "+i+" -");
+            resultat=i;
+         }
+   }
+    }
+    
+    return resultat;
+    }
+
+}

@@ -1,0 +1,47 @@
+	Exercice 6 :
+
+The sum of the squares of the first ten natural numbers is, 385
+
+The square of the sum of the first ten natural numbers is, 3025
+
+Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is
+3025-385=2640
+.
+
+Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.	
+
+	Answer :
+
+import java.lang.Math;
+
+public class Main
+{
+	public static void main(String[] args) {
+	  
+      int res =0;
+
+      res = affichage();
+      System.out.println("resultat = "+res);
+	   
+    }
+    public static int affichage(){
+
+        int A=0;
+        int B=0;
+        int C=0;
+        int resultat=0;
+        
+        for(int i=1;i<101;i++){
+            A=A+(int)Math.pow(i,2);
+            B=i+B;
+            C=(int)Math.pow(B,2);
+        }
+        resultat=C-A;
+        System.out.println("A = "+A);
+        System.out.println("B = "+B);
+        System.out.println("C = "+C);
+        //System.out.println("resultat = "+resultat);
+
+        return resultat;
+    }
+}

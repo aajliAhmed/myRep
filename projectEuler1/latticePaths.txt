@@ -1,0 +1,37 @@
+
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    long nombre1=0;
+	    long nombre2=0;
+	    long r=0;
+	    long resultat=1;
+	    long resultat1=1;
+	    long resultat2=1;
+	    long affichage=0;
+	    Scanner scanf = new Scanner(System.in);
+	    
+	    System.out.print("Entrer nombre 1 : ");
+	    nombre1 = scanf.nextInt();
+	    System.out.print("Entrer nombre 2 : ");
+	    nombre2 = scanf.nextInt();
+	    r=nombre2+nombre1;
+	    
+	    for(int i=1;i<=r;i++){
+        resultat=resultat*i;
+        }
+        
+        for(int i=1;i<=nombre1;i++){
+        resultat1=resultat1*i;
+        }
+        
+        for(int i=1;i<=nombre2;i++){
+        resultat2=resultat2*i;
+        }
+        affichage=resultat/(resultat1*resultat2);
+        System.out.println(" affichage = "+affichage);
+	}
+}

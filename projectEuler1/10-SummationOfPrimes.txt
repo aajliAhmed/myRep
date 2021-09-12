@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    long resultat=0;
+		long n=0;
+		Scanner scanf = new Scanner(System.in);
+		
+		System.out.println("Entrer un nombre ");
+		n = scanf.nextInt();
+		resultat = affichage(n);
+		System.out.println("resultat = "+resultat);
+	}
+	public static int affichage(int n){
+		long A=0;
+        long nombre =0;
+		long r=0;
+		
+		   for(int i=nombre;i<=n;i++){
+         r=0;
+         for (long j=1 ; j<i ; j++){
+            if (i%j==0){ 
+                r++;
+         }
+         
+        }
+         if(r==2){
+            A=A+i;
+            System.out.println("A = "+A+"  ------- i = "+i);
+         }
+		   }
+		   return A;
+	}
+}
