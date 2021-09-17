@@ -1,0 +1,28 @@
+
+import java.math.BigInteger;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    int resultatFinal=0;
+	    
+	    resultatFinal = powerDigit();
+	  	System.out.println("resultat = "+resultatFinal);  
+	}
+
+	public static int powerDigit (){
+
+		int resultat = 0;
+
+		BigInteger nomonre = new BigInteger("2");
+		nomonre = nomonre.pow(1000);
+		char[] tab = nomonre.toString().toCharArray();
+		System.out.println("2^1000 = "+nomonre);
+		
+		for(int i = 0; i < tab.length; i++ ) { 
+			resultat += Character.digit(tab[i],10);
+		}
+		
+		return resultat;
+	}
+}

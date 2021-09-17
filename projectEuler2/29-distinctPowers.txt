@@ -1,0 +1,41 @@
+import java.util.Scanner;
+import java.math.BigInteger;
+import java.util.ArrayList;
+
+public class Main
+{
+	public static void main(String[] args) {
+		
+		Scanner scanf = new Scanner(System.in);
+		int premierNombre  = 0;
+		int deuxiemeNombre  = 0;
+		int resultat = 0;
+		
+		System.out.println("entrer le premier nombre : ");
+		premierNombre = scanf.nextInt();
+		System.out.println("entrer le deuxieme nombre : ");
+		deuxiemeNombre = scanf.nextInt();
+		resultat = distinctPowers(premierNombre,deuxiemeNombre);
+		System.out.println("resultat est : "+resultat);
+		
+	}
+	
+	public static int distinctPowers(int N1,int N2){
+	    
+	    BigInteger rest;
+	    int resultat = 0;
+	    int compteur = 0;
+	    ArrayList<BigInteger> liste = new ArrayList<BigInteger>();
+	    
+	    for(int i=N1;i<=N2;i++){
+	        for(int j=N1;j<=N2;j++){
+	            rest = BigInteger.valueOf(i).pow(j);
+                if(!liste.contains(rest)){
+                    liste.add(rest);
+                }
+	        } 
+	    }
+	    resultat=liste.size();
+	    return resultat;
+	}
+}

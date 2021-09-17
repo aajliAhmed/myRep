@@ -1,0 +1,38 @@
+
+import java.lang.Math;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		String resultat ;
+		
+		resultat = digitFifthPowers();
+		System.out.println("resultat = "+resultat);
+	}
+	
+	public static String digitFifthPowers(){
+	    
+	    int nombre=0;
+	    int y=0;
+	    int somme=0;
+	    int compare=0;
+	    String resultat="";
+	    
+	    for(int i=2;i<10000000;i++){
+	        compare=0;
+	        nombre=i;
+	        while (nombre != 0) {
+			    y= nombre % 10;
+			    compare += (int)Math.pow(y,5);
+			    nombre /= 10;
+		    }
+		    if(i==compare){
+		        somme+=i;
+		        System.out.println("nombre = "+compare);
+		    }
+		    resultat =Integer.toString(somme);
+	    }
+	    return resultat;
+	}
+}

@@ -1,0 +1,48 @@
+import java.math.BigInteger;
+
+public class Main
+{
+	public static void main(String[] args) {
+	  
+	  BigInteger resultat;
+	  
+	  resultat = digit();
+	  System.out.println("resultat = "+resultat);
+		
+		
+	}
+	public static BigInteger digit (){
+	    
+	    BigInteger nombre ;
+		BigInteger A = new BigInteger("1");
+		BigInteger B = new BigInteger("1");
+		BigInteger fin = new BigInteger("0");
+		BigInteger compare = new BigInteger("10");
+        BigInteger rest ;
+        BigInteger resultat;
+        BigInteger copieDeNombre;
+        int count=0;
+        int plusGrand=0;
+        
+        for(int i=1;i<2000000;i++){
+            nombre = A.add(B);
+            A=B;
+            B=nombre;
+            
+            while (nombre<=fin){
+                copieDeNombre = nombre;
+                rest=nombre.mod(compare);
+                nombre=nombre.divide(compare);
+                count++;
+                
+            } 
+            if(count>plusGrand){
+                plusGrand=count;
+            }
+            if(count==1000){
+                resultat = copieDeNombre;
+            }
+        }
+        return resultat;
+	}
+}
