@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    Scanner scanf = new Scanner(System.in);
+	    int nombreLimit = 0;
+	    int resultat=0;
+	    
+	    System.out.println("entrer le nombre Limit : ");
+	    nombreLimit = scanf.nextInt();
+	    resultat = IntegerRightTriangles(nombreLimit);
+	    System.out.println(" resultat est : "+resultat);
+	    
+	}
+	
+	public static int IntegerRightTriangles(int limit){
+	    
+		int count = 0;
+		int plusGrand=0;
+		int resultat=0;
+
+	for (int p=1;p<=limit;p++){
+	    count=0;
+        for (int a = 1; a <= p; a++) {
+	 		for (int b = a; b <= p; b++){
+	            for(int c = a; c <= p; c++){
+	                if ( a*a + b*b == c*c && (a+b+c) == p ){
+	                    count++;
+    	            }
+    	            if(count>plusGrand){
+	                     plusGrand=count;
+	                    resultat=p;
+	                }
+	            }
+            }
+    	}
+	}
+        return resultat;	   
+	}
+}
